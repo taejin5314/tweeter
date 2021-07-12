@@ -1,0 +1,21 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__avatar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.header__name {
+  display: flex;
+  justify-content: center;
+}
+
+.header__name h2 {
+  margin: 0;
+}
