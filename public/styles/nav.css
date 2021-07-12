@@ -8,6 +8,7 @@ nav {
   align-items: center;
   position: fixed;
   width: 100vw;
+  margin-top: -120px;
   z-index: 1;
 }
 
