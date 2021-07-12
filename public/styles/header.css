@@ -3,9 +3,10 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #0eb7eb;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  margin-top: 120px;
+  margin-top: 3.5em;
 }
 
 .header__avatar {
