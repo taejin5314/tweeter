@@ -15,11 +15,12 @@
 
 .container__form textarea {
   margin-bottom: 0.5em;
-  height: 1.7em;
+  font-size: 0.7em;
+  height: 3em;
   background: transparent;
   outline: none;
   border: none;
-  border-bottom: 3px solid;
+  border-bottom: 4px solid #545149;
 }
 
 .container__tweetBtn {
@@ -31,4 +32,7 @@
 .container__tweetBtn button {
   background-color: #4056A1;
   color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
