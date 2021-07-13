@@ -44,6 +44,7 @@
   padding: 0 20px;
   margin-bottom: 36px;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .tweet-footer {
