@@ -1,20 +1,21 @@
-.container__newTweet {
-  width: 100%;
+.container-newTweet {
+  width: 97%;
+  margin-bottom: 30px;
 }
 
-.container__form {
+.container-form {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.container__form label {
+.container-form label {
   font-weight: bold;
-  margin-bottom: 0.5em;
+  margin-bottom: 12px;
 }
 
-.container__form textarea {
-  margin-bottom: 0.5em;
+.container-form textarea {
+  margin-bottom: 12px;
   font-size: 0.7em;
   height: 3em;
   background: transparent;
@@ -23,13 +24,13 @@
   border-bottom: 4px solid #545149;
 }
 
-.container__tweetBtn {
+.container-tweetBtn {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee';
 }
 
-.container__tweetBtn button {
+.container-tweetBtn button {
   background-color: #4056A1;
   color: #ffffff;
   outline: none;

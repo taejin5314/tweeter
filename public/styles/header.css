@@ -1,4 +1,4 @@
-.header__header {
+.header-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -6,19 +6,19 @@
   justify-content: center;
   background-color: #0eb7eb;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  margin-top: 3.5em;
+  margin-top: 80px;
 }
 
-.header__avatar {
+.header-avatar {
   display: flex;
   justify-content: center;
 }
 
-.header__name {
+.header-name {
   display: flex;
   justify-content: center;
 }
 
-.header__name h2 {
+.header-name h2 {
   margin: 0;
 }
