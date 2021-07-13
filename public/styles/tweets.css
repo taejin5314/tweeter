@@ -29,11 +29,8 @@
   flex-grow: 1;
 }
 
-.tweet__header a, 
-.tweet__header a:link,
-.tweet__header a:visited {
+.tweet__header span {
   font-weight: 600;
-  text-decoration: none;
   color: #c5cbe3;
 }
 

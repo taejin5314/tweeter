@@ -3,13 +3,13 @@ $(document).ready(function() {
     const maxLength = 140;
     const textLength = $(this).val().length;
     const count = maxLength - textLength;
-    const countSelector = $($(this).parent().children()[2]).children()[1];
+    const $countSelector = $($(this).parent().children()[2]).children()[1];
     
     if (count < 0) {
-      $(countSelector).css('color', '#FF0000');
+      $($countSelector).css('color', '#FF0000');
     } else {
-      $(countSelector).css('color', '#000000')
+      $($countSelector).css('color', '#000000')
     }
-    $(countSelector).text(count);
+    $($countSelector).text(count);
   })
 })
