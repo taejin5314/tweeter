@@ -55,6 +55,7 @@ $(function() {
     const textValue = formValue.split('=')[1];
 
     if (textValue && textValue.length <= 140) {
+      $('#error-message').slideUp('slow');
       $('#tweet-text').val('');
       $.post('tweets', formValue, function() {
         ($.ajax('tweets', {method: 'GET'})
@@ -64,10 +65,14 @@ $(function() {
       });
       // clear the form when tweet is sent successfully
     } else if (textValue.length > 140) {
-      alert('Your tweet should not over 140!');
+      $('#error-message span').text('Too long. Plz respect our arbitrary limit of 140 characters!');
+      $('#error-message').slideDown('slow');
     } else {
-      alert('Your tweet should not be empty!');
+      $('#error-message span').text('Empty! Plz fill it with something!');
+      $('#error-message').slideDown('slow');
     }
+    $('#tweet-text').val('');
+    $('.counter').css('color', '#545149')
   });
 
   fetchTweets();
