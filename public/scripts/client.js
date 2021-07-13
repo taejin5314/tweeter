@@ -57,11 +57,12 @@ $(function() {
     if (textValue && textValue.length <= 140) {
       $.post('tweets', formValue)
       // clear the form when tweet is sent successfully
-      $(this).closest('form').find("input[type=text], textarea").val("");
-      $.ajax('tweets', {method: 'GET'})
-        .then(function(tweetData) {
-          renderTweets(tweetData.slice(-1));
-        })
+        .then($(this).closest('form').find("input[type=text], textarea").val(""))
+        .then($.ajax('tweets', {method: 'GET'})
+                .then(function(tweetData) {
+                  // fetch last tweet
+                  renderTweets(tweetData[tweetData.length-1]);
+                }))
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
     } else {
