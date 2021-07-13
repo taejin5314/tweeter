@@ -55,14 +55,14 @@ $(function() {
     const textValue = formValue.split('=')[1];
 
     if (textValue && textValue.length <= 140) {
-      $.post('tweets', formValue)
-      // clear the form when tweet is sent successfully
-        .then($(this).closest('form').find("input[type=text], textarea").val(""))
-        .then($.ajax('tweets', {method: 'GET'})
-                .then(function(tweetData) {
-                  // fetch last tweet
-                  renderTweets(tweetData.slice(-1));
-                }))
+      $('#tweet-text').val('');
+      $.post('tweets', formValue, function() {
+        ($.ajax('tweets', {method: 'GET'})
+          .then((data) => {
+          renderTweets(data.slice(-1))
+          }))
+      })
+        // clear the form when tweet is sent successfully
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
     } else {
