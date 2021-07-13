@@ -4,39 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-  const avatars = {
-      
-    Female: ["https://i.imgur.com/nlhLi3I.png","https://i.imgur.com/z5LNkkB.png","https://i.imgur.com/v0JXau2.png","https://i.imgur.com/lRUnDgU.png", "https://i.imgur.com/3GvwNBf.png"],
-    Male: ["https://i.imgur.com/73hZDYK.png","https://i.imgur.com/5fUVPRP.png","https://i.imgur.com/DVpDmdR.png","https://i.imgur.com/2WZtOD6.png", "https://i.imgur.com/ilT4JDe.png"]
-  
-  }
-  
-  // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
+$(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -73,12 +41,22 @@ $(document).ready(function() {
   // when new tweet submitted
   $('.container-form').submit(function(event) {
     event.preventDefault();
-    const formValue = $(this).serialize();
 
-    $.post('tweets', formValue, function(data) {
-      console.log(data);
-    })
+    const formValue = $(this).serialize();
+    const textValue = formValue.split('=')[1];
+
+    if (textValue && textValue.length <= 140) {
+      $.post('tweets', formValue);
+    } else if (textValue.length > 140) {
+      alert('Your tweet should not over 140!');
+    } else {
+      alert('Your tweet should not be empty!');
+    }
   })
-  
-  renderTweets(data);
+
+  // fetch the tweet data from tweets endpoint
+  const data = $.ajax('tweets', {method: 'GET'})
+    .then(function (tweetData) {
+      renderTweets(tweetData);
+    })
 });
