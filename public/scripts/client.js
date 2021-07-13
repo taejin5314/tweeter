@@ -19,7 +19,7 @@ $(function() {
       .then(function(tweetData) {
         renderTweets(tweetData);
       });
-  }
+  };
   
   // create tweet
   const createTweetElement = function(tweet) {
@@ -59,10 +59,10 @@ $(function() {
       $.post('tweets', formValue, function() {
         ($.ajax('tweets', {method: 'GET'})
           .then((data) => {
-          renderTweets(data.slice(-1))
-          }))
-      })
-        // clear the form when tweet is sent successfully
+            renderTweets(data.slice(-1));
+          }));
+      });
+      // clear the form when tweet is sent successfully
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
     } else {
