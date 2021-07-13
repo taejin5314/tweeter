@@ -5,14 +5,23 @@
  */
 
 $(function() {
+  // render the each tweet
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-    
-      $('#tweets-container').append($tweet);
+      $tweet.insertAfter($('#tweets-container').children()[0]);
     }
   };
+
+  // fetch the tweet data from tweets endpoint
+  const fetchTweets = function() {
+    $.ajax('tweets', {method: 'GET'})
+      .then(function(tweetData) {
+        renderTweets(tweetData);
+      });
+  }
   
+  // create tweet
   const createTweetElement = function(tweet) {
     let $tweet = $(`
       <article class="tweet">
@@ -46,9 +55,14 @@ $(function() {
     const textValue = formValue.split('=')[1];
 
     if (textValue && textValue.length <= 140) {
-      $.post('tweets', formValue);
+      $.post('tweets', formValue)
       // clear the form when tweet is sent successfully
       $(this).closest('form').find("input[type=text], textarea").val("");
+      $.ajax('tweets', {method: 'GET'})
+        .then(function(tweetData) {
+          console.log(tweetData.slice(-1))
+          renderTweets(tweetData.slice(-1));
+        })
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
     } else {
@@ -56,9 +70,5 @@ $(function() {
     }
   });
 
-  // fetch the tweet data from tweets endpoint
-  const data = $.ajax('tweets', {method: 'GET'})
-    .then(function(tweetData) {
-      renderTweets(tweetData);
-    });
+  fetchTweets();
 });
