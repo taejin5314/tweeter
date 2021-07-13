@@ -76,8 +76,8 @@ $(document).ready(function() {
     const formValue = $(this).serialize();
 
     $.post('tweets', formValue, function(data) {
-        console.log(data.text);
-      }, 'json')
+      console.log(data);
+    })
   })
   
   renderTweets(data);
