@@ -16,7 +16,8 @@
 
 .container-form textarea {
   margin-bottom: 12px;
-  font-size: 0.7em;
+  font-size: 0.9em;
+  font-weight: 600;
   height: 3em;
   background: transparent;
   outline: none;
