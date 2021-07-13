@@ -61,7 +61,7 @@ $(function() {
         .then($.ajax('tweets', {method: 'GET'})
                 .then(function(tweetData) {
                   // fetch last tweet
-                  renderTweets(tweetData[tweetData.length-1]);
+                  renderTweets(tweetData.slice(-1));
                 }))
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
