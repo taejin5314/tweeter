@@ -47,6 +47,8 @@ $(function() {
 
     if (textValue && textValue.length <= 140) {
       $.post('tweets', formValue);
+      // clear the form when tweet is sent successfully
+      $(this).closest('form').find("input[type=text], textarea").val("");
     } else if (textValue.length > 140) {
       alert('Your tweet should not over 140!');
     } else {
