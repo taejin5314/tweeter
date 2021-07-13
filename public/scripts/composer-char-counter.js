@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('#tweet-text').on('change', function() {
+    const $countSelector = $($(this).parent().children()[2]).children()[1];
+    $($countSelector).text(140);
+  })
   $('#tweet-text').on('input', function() {
     const maxLength = 140;
     const textLength = $(this).val().length;
