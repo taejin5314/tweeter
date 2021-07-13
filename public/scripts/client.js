@@ -60,7 +60,6 @@ $(function() {
       $(this).closest('form').find("input[type=text], textarea").val("");
       $.ajax('tweets', {method: 'GET'})
         .then(function(tweetData) {
-          console.log(tweetData.slice(-1))
           renderTweets(tweetData.slice(-1));
         })
     } else if (textValue.length > 140) {
