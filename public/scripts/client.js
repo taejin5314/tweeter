@@ -11,7 +11,7 @@ $(function() {
     
       $('#tweets-container').append($tweet);
     }
-  }
+  };
   
   const createTweetElement = function(tweet) {
     let $tweet = $(`
@@ -35,8 +35,8 @@ $(function() {
       </article>
       `);
   
-    return $tweet; 
-  }
+    return $tweet;
+  };
 
   // when new tweet submitted
   $('.container-form').submit(function(event) {
@@ -52,11 +52,11 @@ $(function() {
     } else {
       alert('Your tweet should not be empty!');
     }
-  })
+  });
 
   // fetch the tweet data from tweets endpoint
   const data = $.ajax('tweets', {method: 'GET'})
-    .then(function (tweetData) {
+    .then(function(tweetData) {
       renderTweets(tweetData);
-    })
+    });
 });
