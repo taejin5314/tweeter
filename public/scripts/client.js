@@ -24,8 +24,7 @@ $(document).ready(function() {
   // create tweet
   const createTweetElement = function(tweet) {
     const {avatars, name, handle} = tweet.user;
-    const {text} = tweet.content;
-    const {created_at} = tweet;
+    const {created_at, content} = tweet;
 
     let $tweet = $(`
       <article class="tweet">
@@ -35,7 +34,7 @@ $(document).ready(function() {
           <span>${handle}</span>
         </header>
         <div class="tweet-content">
-          <p>${text}</p>
+          <p>${content.text}</p>
         </div>
         <footer class="tweet-footer">
           <p>${timeago.format(created_at)}</p>
