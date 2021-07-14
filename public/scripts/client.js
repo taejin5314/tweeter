@@ -23,18 +23,22 @@ $(document).ready(function() {
   
   // create tweet
   const createTweetElement = function(tweet) {
+    const {avatars, name, handle} = tweet.user;
+    const {text} = tweet.content;
+    const {created_at} = tweet;
+
     let $tweet = $(`
       <article class="tweet">
         <header class="tweet-header">
-          <img src="${tweet.user.avatars}" alt="face">
-          <p>${tweet.user.name}</p>
-          <span>${tweet.user.handle}</span>
+          <img src="${avatars}" alt="face">
+          <p>${name}</p>
+          <span>${handle}</span>
         </header>
         <div class="tweet-content">
-          <p>${tweet.content.text}</p>
+          <p>${text}</p>
         </div>
         <footer class="tweet-footer">
-          <p>${timeago.format(tweet.created_at)}</p>
+          <p>${timeago.format(created_at)}</p>
           <div class="tweet-icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
