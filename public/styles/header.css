@@ -4,9 +4,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 80px;
+}
+
+.header-container {
+  height: 100%;
+  width: 100%;
   background-color: #0eb7eb;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  margin-top: 80px;
+  margin-top: 37px;
 }
 
 .header-avatar {
@@ -22,4 +28,23 @@
 .header-name h2 {
   margin: 0;
   color: white;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .header-header {
+    flex-basis: 35%;
+    position: sticky;
+    top: 20%;
+    align-items: center;
+  }
+
+  .header-container {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

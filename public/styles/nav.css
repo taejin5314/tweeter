@@ -44,3 +44,10 @@ nav {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    margin: 0;
+  }
+}

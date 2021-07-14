@@ -81,3 +81,16 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-basis: 65%;
+    margin-top: 120px;
+  }
+
+  .container section,
+  .container article {
+    width: 80%;
+  }
+}
