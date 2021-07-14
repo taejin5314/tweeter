@@ -18,12 +18,17 @@ nav {
 }
 
 .nav-right {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.nav-right p {
+.nav-right button {
   margin: 0;
   margin-top: -20px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 @keyframes iconMove {
