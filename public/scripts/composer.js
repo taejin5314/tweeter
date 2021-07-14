@@ -5,7 +5,7 @@ $(document).ready(function() {
       $('.container-newTweet > form > textarea').toggleClass('active');
       $('.container-newTweet > form > textarea.active').focus();
     });
-  })
+  });
 
   // click back to the top button
   $('#back-top').on('click', function(event) {
@@ -22,4 +22,4 @@ $(document).ready(function() {
       $('#back-top').fadeOut();
     }
   });
-})
+});

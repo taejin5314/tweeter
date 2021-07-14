@@ -76,7 +76,7 @@ $(document).ready(function() {
       $('#error-message').slideDown('slow');
     }
     $('#tweet-text').val('');
-    $('.counter').css('color', '#545149')
+    $('.counter').css('color', '#545149');
   });
 
   fetchTweets();
