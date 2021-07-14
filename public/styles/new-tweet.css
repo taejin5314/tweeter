@@ -66,6 +66,7 @@
   background-color: red;
   color: white;
   cursor: pointer;
+  display: none;
 }
 
 @keyframes arrowMove {
@@ -76,7 +77,6 @@
 
 #back-top i {
   position: absolute;
-  
   animation-name: arrowMove;
   animation-duration: 2s;
   animation-iteration-count: infinite;
