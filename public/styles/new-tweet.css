@@ -1,6 +1,7 @@
 .container-newTweet {
   width: 97%;
   margin-bottom: 30px;
+  display: none;
 }
 
 .container-form {
