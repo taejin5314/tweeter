@@ -75,5 +75,14 @@ $(function() {
     $('.counter').css('color', '#545149')
   });
 
+  // new-compose button
+  $('.nav-right button').on('click', function(event) {
+    $('.container-newTweet').slideToggle('slow', function() {
+      $('.container-newTweet > form > textarea').toggleClass('active');
+      $('.container-newTweet > form > textarea.active').focus();
+    });
+  })
+
+
   fetchTweets();
 });
