@@ -15,6 +15,7 @@ $(document).ready(function() {
 
   // fetch the tweet data from tweets endpoint
   const fetchTweets = function() {
+    // ajax -> fetch all tweets
     $.ajax('tweets', {method: 'GET'})
       .then(function(tweetData) {
         renderTweets(tweetData);
@@ -56,11 +57,12 @@ $(document).ready(function() {
 
     const formValue = $(this).serialize();
     const textValue = formValue.split('=')[1];
+    const $errorMsg = $('#error-message');
 
     if (textValue && textValue.length <= 140) {
-      $('#error-message').slideUp('slow');
-      $('#tweet-text').val('');
+      $errorMsg.slideUp('slow');
       $.post('tweets', formValue, function() {
+        // ajax -> fetch the last tweet
         ($.ajax('tweets', {method: 'GET'})
           .then((data) => {
             renderTweets(data.slice(-1));
@@ -68,12 +70,13 @@ $(document).ready(function() {
       });
       // clear the form when tweet is sent successfully
     } else if (textValue.length > 140) {
-      $('#error-message span').text('Too long. Plz respect our arbitrary limit of 140 characters!');
-      $('#error-message').slideDown('slow');
+      $($errorMsg.children()[1]).text('Too long. Plz respect our arbitrary limit of 140 characters!');
+      $errorMsg.slideDown('slow');
     } else {
-      $('#error-message span').text('Empty! Plz fill it with something!');
-      $('#error-message').slideDown('slow');
+      $($errorMsg.children()[1]).text('Empty! Plz fill it with something!');
+      $errorMsg.slideDown('slow');
     }
+    // empty the text form
     $('#tweet-text').val('');
     $('.counter').css('color', '#545149');
   });
