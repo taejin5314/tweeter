@@ -4,20 +4,29 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
-## Screenshots
-
-!["Compose button"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-button.gif)
-!["Compose new tweet"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-tweet.gif)
-!["Back to top button"](https://github.com/taejin5314/tweeter/blob/master/docs/backtop-button.gif)
-!["Tweets animation"](https://github.com/taejin5314/tweeter/blob/master/docs/tweets-animation.gif)
-!["Responsive web"](https://github.com/taejin5314/tweeter/blob/master/docs/responsive.gif)
-
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm start` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+
+## Screenshots
+
+1. Nav bar - Compose button
+!["Compose button"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-button.gif)
+<br><br>
+2. Compose a new tweet
+!["Compose new tweet"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-tweet.gif)
+<br><br>
+3. Back to top button
+!["Back to top button"](https://github.com/taejin5314/tweeter/blob/master/docs/backtop-button.gif)
+<br><br>
+4. Tweets animations (Box shadow, icon color)
+!["Tweets animation"](https://github.com/taejin5314/tweeter/blob/master/docs/tweets-animation.gif)
+<br><br>
+5. Responsive web
+!["Responsive web"](https://github.com/taejin5314/tweeter/blob/master/docs/responsive.gif)
 
 ## Stretch functions
 
