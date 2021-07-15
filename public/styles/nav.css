@@ -11,33 +11,34 @@ nav {
   margin-top: -82px;
   z-index: 1;
 }
-
-.nav-left {
-  font-family: 'Bungee', cursive;
+nav div.nav-left {
+  font-family: "Bungee", cursive;
   font-size: 2em;
 }
-
-.nav-right {
+nav div.nav-right {
   display: flex;
   justify-content: center;
 }
-
-.nav-right button {
+nav div.nav-right button {
   margin: 0;
   margin-top: -20px;
   background: transparent;
-  color: white;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
-
 @keyframes iconMove {
-  0% {top: 68px;}
-  50% {top: 73px;}
-  100% {top: 68px;}
+  0% {
+    top: 68px;
+  }
+  50% {
+    top: 73px;
+  }
+  100% {
+    top: 68px;
+  }
 }
-
-.nav-right i {
+nav div.nav-right i {
   position: absolute;
   color: red;
   animation-name: iconMove;

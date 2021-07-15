@@ -1,25 +1,21 @@
 .container {
   position: relative;
 }
-
-.container-newTweet {
+.container section {
   width: 97%;
   margin-bottom: 30px;
   display: none;
 }
-
-.container-form {
+.container section form {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
-.container-form label {
+.container section form label {
   font-weight: bold;
   margin-bottom: 12px;
 }
-
-.container-form textarea {
+.container section form textarea {
   margin-bottom: 12px;
   font-size: 0.9em;
   font-weight: 600;
@@ -29,33 +25,28 @@
   border: none;
   border-bottom: 4px solid #545149;
 }
-
-.container-tweetBtn {
+.container section form div {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
-
-.container-tweetBtn button {
+.container section form div button {
   background-color: #4056A1;
   color: #ffffff;
   border: none;
   cursor: pointer;
 }
-
-#error-message {
+.container section div#error-message {
   color: red;
   border: 3px solid red;
   padding: 15px 25px;
   margin-bottom: 30px;
   display: none;
 }
-
-#error-message span {
+.container section div#error-message span {
   margin: 0 10px;
 }
-
-#back-top {
+.container button#back-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -68,14 +59,21 @@
   cursor: pointer;
   display: none;
 }
-
 @keyframes arrowMove {
-  0% {bottom: 12px; left: 17.5px;}
-  50% {bottom: 17px; left: 17.5px;}
-  100% {bottom: 12px; left: 17.5px;}
+  0% {
+    bottom: 12px;
+    left: 17.5px;
+  }
+  50% {
+    bottom: 17px;
+    left: 17.5px;
+  }
+  100% {
+    bottom: 12px;
+    left: 17.5px;
+  }
 }
-
-#back-top i {
+.container button#back-top i {
   position: absolute;
   animation-name: arrowMove;
   animation-duration: 2s;
@@ -88,9 +86,8 @@
     flex-basis: 65%;
     margin-top: 120px;
   }
-
   .container section,
-  .container article {
+.container article {
     width: 80%;
   }
 }
