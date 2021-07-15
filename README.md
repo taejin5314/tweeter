@@ -14,19 +14,15 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 
 1. Nav bar - Compose button
-!["Compose button"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-button.gif)
-<br><br>
+  - !["Compose button"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-button.gif)
 2. Compose a new tweet
-!["Compose new tweet"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-tweet.gif)
-<br><br>
+  - !["Compose new tweet"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-tweet.gif)
 3. Back to top button
-!["Back to top button"](https://github.com/taejin5314/tweeter/blob/master/docs/backtop-button.gif)
-<br><br>
+  - !["Back to top button"](https://github.com/taejin5314/tweeter/blob/master/docs/backtop-button.gif)
 4. Tweets animations (Box shadow, icon color)
-!["Tweets animation"](https://github.com/taejin5314/tweeter/blob/master/docs/tweets-animation.gif)
-<br><br>
+  - !["Tweets animation"](https://github.com/taejin5314/tweeter/blob/master/docs/tweets-animation.gif)
 5. Responsive web
-!["Responsive web"](https://github.com/taejin5314/tweeter/blob/master/docs/responsive.gif)
+  - !["Responsive web"](https://github.com/taejin5314/tweeter/blob/master/docs/responsive.gif)
 
 ## Stretch functions
 
