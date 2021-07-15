@@ -6,6 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+!["Compose button"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-button.gif)
+!["Compose new tweet"](https://github.com/taejin5314/tweeter/blob/master/docs/compose-tweet.gif)
+!["Back to top button"](https://github.com/taejin5314/tweeter/blob/master/docs/backtop-button.gif)
+!["Tweets animation"](https://github.com/taejin5314/tweeter/blob/master/docs/tweets-animation.gif)
+!["Responsive web"](https://github.com/taejin5314/tweeter/blob/master/docs/responsive.gif)
 
 ## Getting Started
 
