@@ -18,6 +18,9 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   min-width: 300px;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 body main {
   width: 94%;
   margin: auto;
