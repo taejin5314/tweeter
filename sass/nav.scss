@@ -1,0 +1,56 @@
+$nav-background-color: #4056A1;
+$nav-font-color: #ffffff;
+
+nav {
+  background-color: $nav-background-color;
+  color: $nav-font-color;
+  height: 120px;
+  padding: 0 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  margin-top: -82px;
+  z-index: 1;
+
+  div.nav-left {
+    font-family: 'Bungee', cursive;
+    font-size: 2em;
+  }
+  
+  div.nav-right {
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin: 0;
+      margin-top: -20px;
+      background: transparent;
+      color: $nav-font-color;
+      border: none;
+      cursor: pointer;
+    }
+
+    @keyframes iconMove {
+      0% {top: 68px;}
+      50% {top: 73px;}
+      100% {top: 68px;}
+    }
+
+    i {
+      position: absolute;
+      color: red;
+      animation-name: iconMove;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }    
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    margin: 0;
+  }
+}

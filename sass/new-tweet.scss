@@ -1,0 +1,98 @@
+$primary-color: #545149;
+
+.container {
+  position: relative;
+
+  section {
+    width: 97%;
+    margin-bottom: 30px;
+    display: none;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      textarea {
+        margin-bottom: 12px;
+        font-size: 0.9em;
+        font-weight: 600;
+        height: 3em;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 4px solid $primary-color;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Bungee';
+
+        button {
+          background-color: #4056A1;
+          color: #ffffff;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    div#error-message {
+      color: red;
+      border: 3px solid red;
+      padding: 15px 25px;
+      margin-bottom: 30px;
+      display: none;
+    
+      span {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  button#back-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    display: none;
+
+    @keyframes arrowMove {
+      0% {bottom: 12px; left: 17.5px;}
+      50% {bottom: 17px; left: 17.5px;}
+      100% {bottom: 12px; left: 17.5px;}
+    }
+
+    i {
+      position: absolute;
+      animation-name: arrowMove;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-basis: 65%;
+    margin-top: 120px;
+
+    section,
+    article {
+      width: 80%;
+    }
+  }
+}

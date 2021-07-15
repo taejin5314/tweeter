@@ -1,0 +1,56 @@
+@mixin vertical-align($position: center) {
+  display: flex;
+  justify-content: $position;
+}
+
+$header-background: #0eb7eb;
+$header-background-img: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+header.header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+
+  section {
+    height: 100%;
+    width: 100%;
+    background-color: $header-background;
+    background-image: $header-background-img;
+    margin-top: 37px;
+
+    div.header-avatar {
+      @include vertical-align;
+    }
+
+    div.header-name {
+      @include vertical-align;
+
+      h2 {
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  header.header {
+    flex-basis: 35%;
+    position: sticky;
+    top: 20%;
+    align-items: center;
+
+    section {
+      width: 80%;
+      height: 100%;
+      margin: 0;
+      @include vertical-align;
+      flex-direction: column;
+    }
+  }
+
+}
