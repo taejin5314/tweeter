@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  // reset the count when the form is submitted
-  $('#tweet-text').on('change', function() {
-    const $countSelector = $($(this).parent().children()[2]).children()[1];
-    $($countSelector).text(140);
+  // reset counter when tweet button is clicked
+  $('.container-tweetBtn button').on('click', function() {
+    $($($(this).parent()).children()[1]).val(140);
   });
-
+  
   // count the character every time user types
   $('#tweet-text').on('input', function() {
     const maxLength = 140;
